@@ -1,0 +1,64 @@
+{
+  "work": {
+    "eyebrow": "Ideas made tangible",
+    "title": "Selected Work",
+    "intro": "Projects developed across our different labs",
+    "note": "Project slots currently use branded placeholder media. Each will be replaced with its own imagery and case-study material as content is supplied."
+  },
+  "labs": {
+    "eyebrow": "Different disciplines. Connected thinking.",
+    "title": "One studio. Five ways of making.",
+    "intro": "TMProductLab operates as a connected studio system. Each Lab has its own methods while sharing a commitment to precision, iteration, and clear communication."
+  },
+  "process": {
+    "eyebrow": "Concept to creation",
+    "title": "A process built to adapt.",
+    "intro": "Projects can enter at any stage and move through only what they need. The value is continuity between creative direction and technical execution.",
+    "throughlineEyebrow": "The throughline",
+    "throughlineTitle": "Structured enough to build. Flexible enough to discover."
+  },
+  "about": {
+    "eyebrow": "Precision meets creativity",
+    "personName": "Tanaka Matsimbi",
+    "title": "Multidisciplinary product designer.",
+    "intro": "Tanaka Matsimbi is a multidisciplinary product designer working across product development, CAD engineering, visualization, and animation. His work connects precise digital modeling with clear visual communication. He approaches projects through structured exploration, iteration, and practical problem-solving. TMProductLab brings these disciplines together from early concept to presentation-ready outcome. He is open to project work, employment opportunities, and creative collaboration.",
+    "portrait": "",
+    "portraitAlt": "Portrait of Tanaka Matsimbi",
+    "missionEyebrow": "Studio mission",
+    "missionTitle": "Bridge the gap between concept and creation.",
+    "missionParagraphs": [
+      "The studio develops ideas into outcomes that are technically viable, visually engaging, and ready for real-world application or presentation.",
+      "TMProductLab is structured to grow: collaborators and contributors can join a project without fragmenting the studio into disconnected disciplines."
+    ],
+    "principlesEyebrow": "Studio principles",
+    "principlesTitle": "A clear method behind every discipline.",
+    "principlesIntro": "Four working principles connect technical development, visual communication, and the decisions made between them.",
+    "principles": [
+      { "title": "Function meets creativity", "copy": "Ideas must work and communicate clearly.", "detail": "Use, character, and presentation are considered together so a strong concept never loses practical purpose." },
+      { "title": "Precision-driven", "copy": "Geometry, proportion, and presentation are controlled with intent.", "detail": "CAD decisions, visual hierarchy, and final outputs are developed with the same attention to accuracy." },
+      { "title": "Modular thinking", "copy": "Systems are designed to adapt, combine, and evolve.", "detail": "Projects are structured in flexible parts so new disciplines, collaborators, and prototype stages can be added naturally." },
+      { "title": "Iterative refinement", "copy": "Testing and revision are part of the outcome, not an afterthought.", "detail": "Each version creates evidence for the next, turning feedback and technical constraints into visible improvement." }
+    ],
+    "collaboratorsEyebrow": "Collaborator network",
+    "collaboratorsTitle": "Built independently. Connected when needed.",
+    "collaboratorsIntro": "Profiles can be added as projects bring new creative and technical collaborators into the studio.",
+    "collaborators": [],
+    "clientsEyebrow": "Selected clients",
+    "clientsTitle": "Clients and Project Partners",
+    "clientsIntro": "Add a client name, logo, and optional link when the relationship is ready to be shown publicly.",
+    "clients": []
+  },
+  "contact": {
+    "eyebrow": "Great ideas start with a conversation",
+    "title": "Let’s make the next idea tangible.",
+    "intro": "Choose the reason for your message. Your email application will open with a prepared subject line; attach files there or include a cloud link.",
+    "inquiries": [
+      { "label": "Start a project", "subject": "Project inquiry" },
+      { "label": "Request a quote", "subject": "Quote request" },
+      { "label": "Employment opportunity", "subject": "Employment opportunity" },
+      { "label": "Creative collaboration", "subject": "Creative collaboration" }
+    ],
+    "socialEyebrow": "Social channels",
+    "socialPending": "Social links will be connected when the official profiles are supplied."
+  }
+}

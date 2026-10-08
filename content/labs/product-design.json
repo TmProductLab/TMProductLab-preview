@@ -1,0 +1,23 @@
+{
+  "slug": "product-design",
+  "order": 1,
+  "number": "01",
+  "name": "Product Design",
+  "shortName": "Product",
+  "statement": "Useful objects, resolved from first principle to final form.",
+  "description": "Consumer and mechanical product development shaped by function, ergonomics, and manufacturable thinking.",
+  "capabilities": [
+    "Concept development",
+    "Ergonomic studies",
+    "Design for manufacture",
+    "Prototype planning"
+  ],
+  "tools": [
+    "Fusion 360",
+    "SolidWorks",
+    "Blender",
+    "Vizcom.ai"
+  ],
+  "image": "/uploads/temporary-prototype.webp",
+  "imageAlt": "Stock reference: a 3D printer producing a prototype"
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "cross-lab-study-01",
+  "order": 6,
+  "index": "006",
+  "title": "Cross-Lab Study 01",
+  "lab": "product-design",
+  "secondaryLabs": [
+    "cad-engineering",
+    "visualization",
+    "2d-animation"
+  ],
+  "year": "Project slot",
+  "status": "Media pending",
+  "summary": "Reserved for a multidisciplinary project moving from concept through technical and visual execution.",
+  "featured": true,
+  "visual": "signal",
+  "thumbnail": "",
+  "thumbnailAlt": "",
+  "modelUrl": "",
+  "modelPoster": "",
+  "mediaFrames": [],
+  "processStages": [
+    "concept",
+    "design",
+    "model",
+    "prototype",
+    "visualize",
+    "present"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "visualization-study-01",
+  "order": 4,
+  "index": "004",
+  "title": "Black–Gold Form Study",
+  "lab": "visualization",
+  "secondaryLabs": [
+    "product-design",
+    "cad-engineering"
+  ],
+  "year": "Temporary sample",
+  "status": "Reference imagery",
+  "summary": "A temporary visualization case study exploring surface, controlled highlights, material contrast, and the studio’s black-and-gold visual language.",
+  "featured": true,
+  "visual": "fold",
+  "thumbnail": "/uploads/temporary-visualization.webp",
+  "thumbnailAlt": "A dark abstract three-dimensional surface with warm gold highlights",
+  "temporary": true,
+  "imageCredit": "Render by Pawel Czerwinski on Unsplash",
+  "imageSource": "https://unsplash.com/photos/a-black-and-brown-abstract-background-with-curves-0-NWB7hW8ns",
+  "modelUrl": "",
+  "modelPoster": "",
+  "mediaFrames": [
+    {
+      "label": "Reference 01",
+      "title": "Material and lighting direction",
+      "caption": "Temporary reference media showing how a finished rendering, lighting breakdown, material study, or animation frame can be paired with concise visual-direction notes.",
+      "phase": "Visualization",
+      "mediaType": "Free-use 3D render",
+      "status": "Temporary",
+      "image": "/uploads/temporary-visualization.webp",
+      "imageAlt": "A dark abstract three-dimensional surface with warm gold highlights"
+    }
+  ],
+  "processStages": [
+    "visualize",
+    "present"
+  ]
+}

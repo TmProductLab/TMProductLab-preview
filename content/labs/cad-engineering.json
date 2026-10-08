@@ -1,0 +1,23 @@
+{
+  "slug": "cad-engineering",
+  "order": 2,
+  "number": "02",
+  "name": "CAD & Engineering",
+  "shortName": "CAD",
+  "statement": "Precision models built to move beyond the screen.",
+  "description": "Parametric and surface modeling, assemblies, technical detailing, and optimization for real-world development.",
+  "capabilities": [
+    "Parametric modeling",
+    "Surface development",
+    "Assembly design",
+    "Technical detailing"
+  ],
+  "tools": [
+    "SolidWorks",
+    "Fusion 360",
+    "FreeCAD",
+    "KiCad"
+  ],
+  "image": "/uploads/temporary-cad.webp",
+  "imageAlt": "Stock reference: an engineer working with CAD on two monitors"
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "lego-design",
+  "order": 3,
+  "number": "03",
+  "name": "LEGO Design",
+  "shortName": "LEGO",
+  "statement": "Structured builds that turn constraints into character.",
+  "description": "Original LEGO models, realistic part usage, stable construction, and clear instruction systems.",
+  "capabilities": [
+    "Custom MOCs",
+    "Structural development",
+    "Digital prototyping",
+    "Instruction design"
+  ],
+  "tools": [
+    "BrickLink Studio",
+    "Blender",
+    "Illustration tools"
+  ],
+  "image": "/uploads/temporary-lego.webp",
+  "imageAlt": "Stock reference: an architectural model built with LEGO bricks"
+}

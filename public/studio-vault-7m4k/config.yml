@@ -1,0 +1,299 @@
+backend:
+  name: github
+  repo: REPLACE_WITH_GITHUB_ACCOUNT/REPLACE_WITH_REPOSITORY
+  branch: main
+  base_url: https://REPLACE_WITH_OAUTH_DOMAIN
+  auth_endpoint: auth
+  auth_scope: repo
+
+local_backend: true
+publish_mode: editorial_workflow
+logo_url: ../tblogo.png
+editor:
+  preview: false
+media_folder: public/uploads
+public_folder: /uploads
+site_url: https://REPLACE_WITH_SITE_DOMAIN
+display_url: https://REPLACE_WITH_SITE_DOMAIN
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+commit_messages:
+  create: "Content: add {{collection}} {{slug}}"
+  update: "Content: update {{collection}} {{slug}}"
+  delete: "Content: remove {{collection}} {{slug}}"
+  uploadMedia: "Media: add {{path}}"
+  deleteMedia: "Media: remove {{path}}"
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: content/projects
+    create: true
+    delete: true
+    format: json
+    extension: json
+    identifier_field: title
+    slug: "{{slug}}"
+    summary: "{{index}} · {{title}} · {{status}}"
+    sortable_fields: [order, title, year, status]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL slug, name: slug, widget: string, hint: "Lowercase letters and hyphens only." }
+      - { label: Display order, name: order, widget: number, value_type: int, min: 1 }
+      - { label: Project number, name: index, widget: string, default: "001" }
+      - label: Primary Lab
+        name: lab
+        widget: select
+        options:
+          - { label: Product Design, value: product-design }
+          - { label: CAD & Engineering, value: cad-engineering }
+          - { label: LEGO Design, value: lego-design }
+          - { label: Visualization & Rendering, value: visualization }
+          - { label: 2D Animation, value: 2d-animation }
+      - label: Secondary Labs
+        name: secondaryLabs
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Product Design, value: product-design }
+          - { label: CAD & Engineering, value: cad-engineering }
+          - { label: LEGO Design, value: lego-design }
+          - { label: Visualization & Rendering, value: visualization }
+          - { label: 2D Animation, value: 2d-animation }
+      - label: Process stages
+        name: processStages
+        widget: select
+        multiple: true
+        required: false
+        hint: "Choose the stages where this project should appear on the Process page."
+        options:
+          - { label: Concept, value: concept }
+          - { label: Design, value: design }
+          - { label: Model, value: model }
+          - { label: Analyze (Finite Element Analysis), value: analyze }
+          - { label: Prototype, value: prototype }
+          - { label: Visualize, value: visualize }
+          - { label: Present, value: present }
+      - { label: Year or project label, name: year, widget: string }
+      - { label: Status, name: status, widget: string }
+      - { label: Summary, name: summary, widget: text }
+      - { label: Show on homepage, name: featured, widget: boolean, default: false }
+      - label: Placeholder style
+        name: visual
+        widget: select
+        options: [grid, orbit, fold, frames, signal, assembly]
+      - { label: Project thumbnail, name: thumbnail, widget: image, required: false }
+      - { label: Thumbnail description, name: thumbnailAlt, widget: string, required: false }
+      - { label: Temporary reference project, name: temporary, widget: boolean, default: false, required: false }
+      - { label: Image credit, name: imageCredit, widget: string, required: false }
+      - { label: Image source URL, name: imageSource, widget: string, required: false }
+      - { label: Interactive 3D model URL, name: modelUrl, widget: string, required: false, hint: "Use a public .glb/.gltf URL. Large models should live outside this repository." }
+      - { label: 3D model poster image, name: modelPoster, widget: image, required: false }
+      - label: Project angles and details (maximum 4)
+        name: mediaFrames
+        widget: list
+        required: false
+        min: 0
+        max: 4
+        hint: "Upload up to four views of this project. Add an angle title and caption for each image. The cover thumbnail is managed separately."
+        summary: "{{fields.label}} · {{fields.title}}"
+        fields:
+          - { label: Label, name: label, widget: string, default: "View 01" }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: caption, widget: text }
+          - { label: Phase, name: phase, widget: string, required: false }
+          - { label: Media type, name: mediaType, widget: string, required: false }
+          - { label: Status, name: status, widget: string, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Image description, name: imageAlt, widget: string, required: false }
+
+  - name: labs
+    label: Labs
+    label_singular: Lab
+    folder: content/labs
+    create: true
+    delete: true
+    format: json
+    extension: json
+    identifier_field: name
+    slug: "{{slug}}"
+    summary: "{{number}} · {{name}}"
+    sortable_fields: [order, name]
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: URL slug, name: slug, widget: string }
+      - { label: Display order, name: order, widget: number, value_type: int, min: 1 }
+      - { label: Lab number, name: number, widget: string }
+      - { label: Short name, name: shortName, widget: string }
+      - { label: One-line statement, name: statement, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Capabilities, name: capabilities, widget: list, field: { label: Capability, name: capability, widget: string } }
+      - { label: Tools, name: tools, widget: list, field: { label: Tool, name: tool, widget: string } }
+      - { label: Homepage image, name: image, widget: image, required: false }
+      - { label: Image description, name: imageAlt, widget: string, required: false }
+
+  - name: pages
+    label: Pages and studio settings
+    files:
+      - label: Homepage
+        name: home
+        file: content/pages/home.json
+        format: json
+        fields:
+          - { label: Hero welcome label, name: heroWelcome, widget: string }
+          - { label: Hero line one, name: heroLineOne, widget: string }
+          - { label: Hero line two, name: heroLineTwo, widget: string }
+          - { label: Hero service description, name: heroDescriptor, widget: text }
+          - { label: Hero subtitle, name: heroSubtitle, widget: string }
+          - { label: Hero image, name: heroImage, widget: image }
+          - { label: Hero image description, name: heroImageAlt, widget: string }
+          - { label: Bridge label, name: bridgeEyebrow, widget: string }
+          - { label: Bridge statement, name: bridgeStatement, widget: text }
+          - { label: Bridge metadata, name: bridgeMeta, widget: list, field: { label: Item, name: item, widget: string } }
+          - { label: Selected work label, name: selectedEyebrow, widget: string }
+          - { label: Selected work title, name: selectedTitle, widget: string }
+          - { label: Labs label, name: labsEyebrow, widget: string }
+          - { label: Labs title, name: labsTitle, widget: text }
+          - { label: Labs copy, name: labsCopy, widget: text }
+          - { label: Process label, name: processEyebrow, widget: string }
+          - { label: Process title, name: processTitle, widget: string }
+          - { label: Process copy, name: processCopy, widget: text }
+          - { label: Statement lines, name: statementLines, widget: list, field: { label: Line, name: line, widget: string } }
+          - { label: Contact label, name: contactEyebrow, widget: string }
+          - { label: Contact title, name: contactTitle, widget: string }
+      - label: Work, Labs, Process, About and Contact
+        name: site_pages
+        file: content/pages/site-pages.json
+        format: json
+        fields:
+          - label: Work page
+            name: work
+            widget: object
+            fields:
+              - { label: Label, name: eyebrow, widget: string }
+              - { label: Name, name: personName, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Introduction, name: intro, widget: text }
+              - { label: Portrait, name: portrait, widget: image, required: false }
+              - { label: Portrait description, name: portraitAlt, widget: string }
+              - { label: Project note, name: note, widget: text }
+          - label: Labs page
+            name: labs
+            widget: object
+            fields:
+              - { label: Label, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Introduction, name: intro, widget: text }
+          - label: Process page
+            name: process
+            widget: object
+            fields:
+              - { label: Label, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Introduction, name: intro, widget: text }
+              - { label: Throughline label, name: throughlineEyebrow, widget: string }
+              - { label: Throughline title, name: throughlineTitle, widget: string }
+          - label: About page
+            name: about
+            widget: object
+            fields:
+              - { label: Label, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Introduction, name: intro, widget: text }
+              - { label: Mission label, name: missionEyebrow, widget: string }
+              - { label: Mission title, name: missionTitle, widget: string }
+              - { label: Mission paragraphs, name: missionParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Principles label, name: principlesEyebrow, widget: string }
+              - { label: Principles title, name: principlesTitle, widget: string }
+              - { label: Principles introduction, name: principlesIntro, widget: text }
+              - label: Principles
+                name: principles
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: copy, widget: text }
+                  - { label: Supporting detail, name: detail, widget: text }
+              - { label: Collaborators label, name: collaboratorsEyebrow, widget: string }
+              - { label: Collaborators title, name: collaboratorsTitle, widget: string }
+              - { label: Collaborators introduction, name: collaboratorsIntro, widget: text }
+              - label: Collaborators
+                name: collaborators
+                widget: list
+                required: false
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Role, name: role, widget: string }
+                  - { label: Short introduction, name: summary, widget: text }
+                  - { label: Portrait, name: photo, widget: image, required: false }
+                  - { label: Portrait description, name: photoAlt, widget: string, required: false }
+                  - { label: Profile URL, name: url, widget: string, required: false }
+                  - { label: Link label, name: linkLabel, widget: string, required: false }
+              - { label: Clients label, name: clientsEyebrow, widget: string }
+              - { label: Clients title, name: clientsTitle, widget: string }
+              - { label: Clients introduction, name: clientsIntro, widget: text }
+              - label: Clients
+                name: clients
+                widget: list
+                required: false
+                fields:
+                  - { label: Client name, name: name, widget: string }
+                  - { label: Relationship note, name: note, widget: string, required: false }
+                  - { label: Logo, name: logo, widget: image, required: false }
+                  - { label: Logo description, name: logoAlt, widget: string, required: false }
+                  - { label: Client URL, name: url, widget: string, required: false }
+          - label: Contact page
+            name: contact
+            widget: object
+            fields:
+              - { label: Label, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Introduction, name: intro, widget: text }
+              - label: Inquiry links
+                name: inquiries
+                widget: list
+                fields:
+                  - { label: Link label, name: label, widget: string }
+                  - { label: Email subject, name: subject, widget: string }
+              - { label: Social label, name: socialEyebrow, widget: string }
+              - { label: Social placeholder, name: socialPending, widget: string }
+      - label: Brand, contact and footer
+        name: site
+        file: content/settings/site.json
+        format: json
+        fields:
+          - { label: Site title, name: siteTitle, widget: string }
+          - { label: Search description, name: siteDescription, widget: text }
+          - { label: Logo, name: logo, widget: image }
+          - { label: Wordmark first part, name: wordmarkPrefix, widget: string }
+          - { label: Wordmark gold part, name: wordmarkAccent, widget: string }
+          - { label: Footer statement, name: footerStatement, widget: text }
+          - { label: Footer tagline, name: footerTagline, widget: string }
+          - { label: Copyright, name: copyright, widget: string }
+          - { label: Contact email, name: contactEmail, widget: string, required: false }
+          - { label: Résumé URL, name: resumeUrl, widget: string, required: false }
+          - label: Social links
+            name: socialLinks
+            widget: list
+            required: false
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: url, widget: string }
+      - label: Process stages
+        name: process
+        file: content/settings/process.json
+        format: json
+        fields:
+          - label: Stages
+            name: stages
+            widget: list
+            fields:
+              - { label: Number, name: number, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: copy, widget: text }
+              - { label: Preview image, name: image, widget: image, required: false }
+              - { label: Preview image description, name: imageAlt, widget: string, required: false }

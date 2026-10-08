@@ -1,0 +1,22 @@
+{
+  "slug": "animation-study-01",
+  "order": 5,
+  "index": "005",
+  "title": "Animation Study 01",
+  "lab": "2d-animation",
+  "secondaryLabs": [],
+  "year": "Project slot",
+  "status": "Media pending",
+  "summary": "Reserved for character development, storyboards, model sheets, and finished motion.",
+  "featured": true,
+  "visual": "frames",
+  "thumbnail": "",
+  "thumbnailAlt": "",
+  "modelUrl": "",
+  "modelPoster": "",
+  "mediaFrames": [],
+  "processStages": [
+    "concept",
+    "visualize"
+  ]
+}

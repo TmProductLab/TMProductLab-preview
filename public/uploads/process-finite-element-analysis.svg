@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="stress" x1="0" y1="0" x2="1" y2=".2">
+      <stop stop-color="#ef5034"/><stop offset=".23" stop-color="#ffd500"/><stop offset=".5" stop-color="#6bd09e"/><stop offset="1" stop-color="#225bb9"/>
+    </linearGradient>
+    <pattern id="mesh" width="48" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 0H48V40H0ZM0 0L48 40M0 40L48 0" fill="none" stroke="#090909" stroke-opacity=".5" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#090909"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <g transform="translate(92 125) rotate(-8 310 125)">
+    <path d="M0 0H130V95H610V230H0Z" fill="url(#stress)"/>
+    <path d="M0 0H130V95H610V230H0Z" fill="url(#mesh)" stroke="#ffffff" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M-12 0V230M-32 0L-12 20M-32 30L-12 50M-32 60L-12 80M-32 90L-12 110M-32 120L-12 140M-32 150L-12 170M-32 180L-12 200M-32 210L-12 230" stroke="#a7acb3" fill="none" stroke-width="3"/>
+    <path d="M564 12V75M552 60L564 77L576 60" stroke="#ffd500" stroke-width="4" fill="none"/>
+  </g>
+  <text x="42" y="52" font-family="monospace" font-size="17" fill="#ffd500" letter-spacing="3">FINITE ELEMENT ANALYSIS</text>
+  <text x="42" y="457" font-family="monospace" font-size="12" fill="#b4b9c0" letter-spacing="2">ILLUSTRATIVE STRESS MESH</text>
+</svg>

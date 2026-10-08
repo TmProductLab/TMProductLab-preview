@@ -1,0 +1,40 @@
+{
+  "slug": "engineering-study-01",
+  "order": 2,
+  "index": "002",
+  "title": "CAD Workflow Study",
+  "lab": "cad-engineering",
+  "secondaryLabs": [
+    "product-design"
+  ],
+  "year": "Temporary sample",
+  "status": "Reference imagery",
+  "summary": "A temporary engineering case-study example for presenting technical drawings, parametric decisions, assemblies, and production-ready documentation.",
+  "featured": true,
+  "visual": "grid",
+  "thumbnail": "/uploads/temporary-cad.webp",
+  "thumbnailAlt": "An engineer reviewing technical drawings and CAD documentation on two monitors",
+  "temporary": true,
+  "imageCredit": "Photo by TECNIC Bioprocess Solutions on Unsplash",
+  "imageSource": "https://unsplash.com/photos/a-person-works-on-a-computer-in-an-office-aK-XGXPX4Ao",
+  "modelUrl": "",
+  "modelPoster": "",
+  "mediaFrames": [
+    {
+      "label": "Reference 01",
+      "title": "Technical development",
+      "caption": "Temporary reference media showing where CAD views, drawing sets, assembly logic, constraints, and engineering decisions will be explained.",
+      "phase": "Development",
+      "mediaType": "Free-use reference photograph",
+      "status": "Temporary",
+      "image": "/uploads/temporary-cad.webp",
+      "imageAlt": "An engineer reviewing technical drawings and CAD documentation on two monitors"
+    }
+  ],
+  "processStages": [
+    "design",
+    "model",
+    "analyze",
+    "present"
+  ]
+}

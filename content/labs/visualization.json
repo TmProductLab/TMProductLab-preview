@@ -1,0 +1,22 @@
+{
+  "slug": "visualization",
+  "order": 4,
+  "number": "04",
+  "name": "Visualization & Rendering",
+  "shortName": "Visualize",
+  "statement": "Images and motion that make an idea immediately legible.",
+  "description": "High-quality rendering, product animation, and presentation imagery for explanation, evaluation, and pitching.",
+  "capabilities": [
+    "Product rendering",
+    "Build animation",
+    "Concept visualization",
+    "Presentation systems"
+  ],
+  "tools": [
+    "Blender",
+    "Vizcom.ai",
+    "Krita"
+  ],
+  "image": "/uploads/temporary-visualization.webp",
+  "imageAlt": "Stock reference: abstract black and gold curved surfaces"
+}

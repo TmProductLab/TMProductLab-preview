@@ -1,0 +1,53 @@
+{
+  "stages": [
+    {
+      "number": "01",
+      "title": "Concept",
+      "copy": "Frame the opportunity through sketches, references, use cases, and story.",
+      "image": "/uploads/temporary-process-concept.jpg",
+      "imageAlt": "Stock reference: a sketchbook and pencil"
+    },
+    {
+      "number": "02",
+      "title": "Design",
+      "copy": "Resolve form, proportion, interaction, and structure through deliberate iteration.",
+      "image": "/uploads/temporary-process-design.jpg",
+      "imageAlt": "Stock reference: a product designer sketching"
+    },
+    {
+      "number": "03",
+      "title": "Model",
+      "copy": "Build accurate digital systems, assemblies, characters, or construction logic.",
+      "image": "/uploads/temporary-process-model.jpg",
+      "imageAlt": "Stock reference: a laptop displaying a 3D model"
+    },
+    {
+      "number": "04",
+      "title": "Analyze",
+      "copy": "Evaluate stress, deformation, and structural behavior through finite element analysis to guide design refinement.",
+      "image": "/uploads/process-finite-element-analysis.svg",
+      "imageAlt": "Illustrative finite element mesh with a color gradient showing structural stress distribution"
+    },
+    {
+      "number": "05",
+      "title": "Prototype",
+      "copy": "Test the idea through physical, digital, or sequential versions and refine it.",
+      "image": "/uploads/temporary-process-prototype.jpg",
+      "imageAlt": "Stock reference: a 3D printer"
+    },
+    {
+      "number": "06",
+      "title": "Visualize",
+      "copy": "Make the result clear through rendering, animation, diagrams, or instruction.",
+      "image": "/uploads/temporary-process-visualize.jpg",
+      "imageAlt": "Stock reference: a rendered isometric room"
+    },
+    {
+      "number": "07",
+      "title": "Present",
+      "copy": "Deliver a coherent, presentation-ready outcome built for its next context.",
+      "image": "/uploads/temporary-process-present.jpg",
+      "imageAlt": "Stock reference: a team presentation"
+    }
+  ]
+}

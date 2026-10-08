@@ -1,0 +1,22 @@
+{
+  "slug": "2d-animation",
+  "order": 5,
+  "number": "05",
+  "name": "2D Animation",
+  "shortName": "Animation",
+  "statement": "Character, timing, and story distilled into expressive motion.",
+  "description": "Character development, model sheets, storyboarding, lip-sync, and short-form animated sequences.",
+  "capabilities": [
+    "Character design",
+    "Model sheets",
+    "Storyboarding",
+    "Dialogue animation"
+  ],
+  "tools": [
+    "Krita",
+    "Blender Grease Pencil",
+    "Blender"
+  ],
+  "image": "/uploads/temporary-animation.jpg",
+  "imageAlt": "Stock reference: an artist drawing on a digital tablet"
+}
