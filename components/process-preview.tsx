@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import type { ProcessStage } from "@/lib/site-data";
 import { siteAsset } from "@/lib/site-paths";
 
@@ -20,10 +20,10 @@ export function ProcessPreview({ stages }: { stages: ProcessStage[] }) {
 
   return (
     <div className="process-strip process-strip-interactive">
-      {stages.map((stage) => {
+      {stages.map((stage, index) => {
         const expanded = openStage === stage.number;
         return (
-          <div className={`process-card${expanded ? " is-expanded" : ""}`} key={stage.number}>
+          <div className={`process-card${expanded ? " is-expanded" : ""}`} key={stage.number} style={{ "--process-mobile-row": Math.floor(index / 2) * 2 + 1, "--process-mobile-column": index % 2 + 1 } as CSSProperties}>
             <button
               type="button"
               className={`process-chip${stage.image ? " process-chip-image" : ""}`}
@@ -35,7 +35,7 @@ export function ProcessPreview({ stages }: { stages: ProcessStage[] }) {
               <strong>{stage.title}</strong>
               <span className="process-toggle" aria-hidden="true">{expanded ? "−" : "+"}</span>
             </button>
-            <div id={`process-detail-${stage.number}`} className="process-card-detail" hidden={!expanded}>
+            <div id={`process-detail-${stage.number}`} className="process-card-detail" role="region" aria-label={`${stage.title} details`} hidden={!expanded}>
               <p>{stage.copy}</p>
               {outcomes[stage.title] && <p><b>What you get</b>{outcomes[stage.title]}</p>}
             </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { siteAsset } from "@/lib/site-paths";
 import { SocialIcon, type SocialName } from "@/components/social-icon";
 import { getSiteSettings, getStudioPages } from "@/lib/site-data";
 
@@ -46,11 +47,11 @@ export default function AboutPage() {
           </div>
           <div className="about-portrait">
             {content.portrait ? (
-              <Image src={content.portrait} alt={content.portraitAlt} fill sizes="(max-width: 900px) 100vw, 50vw" priority />
+              <Image src={siteAsset(content.portrait)} alt={content.portraitAlt} fill sizes="(max-width: 900px) 100vw, 50vw" priority />
             ) : (
               <div className="about-portrait-placeholder">
                 <span>Portrait / pending</span>
-                <Image src={siteSettings.logo} alt="" width={220} height={154} />
+                <Image src={siteAsset(siteSettings.logo)} alt="" width={220} height={154} />
                 <strong>{content.personName}</strong>
               </div>
             )}
@@ -97,7 +98,7 @@ export default function AboutPage() {
           {content.collaborators.length ? content.collaborators.map((collaborator) => (
             <article className="collaborator-card" key={collaborator.name}>
               <div className="collaborator-photo">
-                {collaborator.photo ? <Image src={collaborator.photo} alt={collaborator.photoAlt || collaborator.name} fill sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" /> : <span>Photo / pending</span>}
+                {collaborator.photo ? <Image src={siteAsset(collaborator.photo)} alt={collaborator.photoAlt || collaborator.name} fill sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" /> : <span>Photo / pending</span>}
               </div>
               <p className="eyebrow">{collaborator.role}</p>
               <h3>{collaborator.name}</h3>
@@ -124,7 +125,7 @@ export default function AboutPage() {
           </div>
           <div className="client-grid">
             {content.clients.length ? content.clients.map((client) => {
-              const clientContent = <>{client.logo ? <Image src={client.logo} alt={client.logoAlt || client.name} fill sizes="(max-width: 600px) 100vw, 25vw" /> : <strong>{client.name}</strong>}<span>{client.note || "Client"}</span></>;
+              const clientContent = <>{client.logo ? <Image src={siteAsset(client.logo)} alt={client.logoAlt || client.name} fill sizes="(max-width: 600px) 100vw, 25vw" /> : <strong>{client.name}</strong>}<span>{client.note || "Client"}</span></>;
               return client.url ? <a className="client-card" href={client.url} key={client.name} rel="noreferrer" target="_blank">{clientContent}</a> : <article className="client-card" key={client.name}>{clientContent}</article>;
             }) : Array.from({ length: 4 }, (_, index) => (
               <article className="client-card client-card-empty" key={index}>

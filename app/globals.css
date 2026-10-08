@@ -737,3 +737,53 @@ a.footer-social-icon:focus-visible { outline: 2px solid var(--signal); outline-o
   .selected-work .project-description .text-link { font-size: .7rem; }
 }
 
+.mobile-navigation { display: none; }
+@media (max-width: 900px) {
+  .site-header { height: 64px; min-height: 64px; grid-template-columns: 1fr auto; column-gap: 1rem; padding: 0 18px; }
+  .site-header .site-nav { display: none; }
+  .site-header .brand-mark { gap: .6rem; }
+  .site-header .brand-mark-icon { width: 32px; height: 30px; flex-basis: 32px; }
+  .site-header .brand-word { display: inline-flex; font-size: 1.2rem; }
+  .mobile-navigation { display: block; }
+  .mobile-navigation > summary { display: flex; align-items: center; justify-content: center; gap: .6rem; min-width: 76px; min-height: 44px; cursor: pointer; list-style: none; font-size: .85rem; font-weight: 700; }
+  .mobile-navigation summary::-webkit-details-marker { display: none; }
+  .mobile-menu-close-label { display: none; }
+  .mobile-navigation[open] .mobile-menu-open-label { display: none; }
+  .mobile-navigation[open] .mobile-menu-close-label { display: inline; }
+  .mobile-menu-symbol { width: 17px; height: 12px; border-top: 2px solid var(--signal); border-bottom: 2px solid var(--signal); }
+  .mobile-navigation[open] .mobile-menu-symbol { height: 2px; border-bottom: 0; }
+  .mobile-navigation summary:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+  .mobile-menu-panel { position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100dvh - 64px); overflow-y: auto; padding: .75rem 18px 1.25rem; background: var(--ink); border-bottom: 1px solid var(--signal); box-shadow: 0 14px 24px rgba(0,0,0,.45); }
+  .mobile-menu-panel > a { display: flex; align-items: center; justify-content: space-between; min-height: 52px; border-bottom: 1px solid var(--line); font-size: 1.35rem; }
+  .mobile-menu-panel a[aria-current="page"], .mobile-menu-panel > a > span { color: var(--signal); }
+  .mobile-menu-panel a:focus-visible { outline: 2px solid var(--signal); outline-offset: -2px; }
+  .mobile-labs-menu { margin-top: .5rem; }
+  .mobile-labs-menu > summary { display: flex; justify-content: space-between; align-items: center; min-height: 48px; cursor: pointer; list-style: none; color: var(--muted); }
+  .mobile-labs-menu > div { display: grid; padding: 0 0 .5rem 1rem; }
+  .mobile-labs-menu a { display: flex; align-items: center; min-height: 44px; font-size: 1rem; }
+  .mobile-menu-panel .mobile-contact-link { margin-top: .75rem; padding-inline: 1rem; background: var(--signal); color: var(--ink); border: 0; font-size: 1.1rem; font-weight: 700; }
+  .mobile-menu-panel .mobile-contact-link > span { color: var(--ink); }
+  .hero-cinematic, .hero-cinematic-inner { min-height: calc(100svh - 64px); }
+}
+@media (max-width: 600px) {
+  .selected-work .featured-grid { gap: 2rem; }
+  .selected-work .featured-project { margin-bottom: 0; padding-bottom: 1.5rem; }
+  .selected-work .featured-project .project-card { margin-bottom: .5rem !important; }
+  .selected-work .project-card-meta { padding-block: 1rem; }
+  .selected-work .project-description { gap: 1rem; }
+  .selected-work .project-description-copy { margin-block: 0 .5rem; }
+  .selected-work .project-card-side, .selected-work .project-description dd { font-size: .85rem; }
+  .selected-work .project-description dt, .footer-label, .footer-bottom, .process-project-note { font-size: .75rem; }
+  .selected-work .project-description .text-link { min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: .8rem; padding-inline: .75rem; }
+  .project-card-image figcaption, .gallery-counter { font-size: .75rem; }
+  .eyebrow, .process-stage-action { font-size: .75rem; }
+  .footer-social, .contact-social-links { display: grid; grid-template-columns: repeat(3, 44px); gap: 1rem; }
+  .footer-social { justify-content: center; }
+  .process-strip-interactive { gap: 0; }
+  .process-strip-interactive .process-card { display: contents; }
+  .process-strip-interactive .process-card .process-chip { grid-row: var(--process-mobile-row); grid-column: var(--process-mobile-column); border: 1px solid var(--line); min-height: 210px; }
+  .process-strip-interactive .process-card:last-child .process-chip { grid-column: 1 / -1; }
+  .process-strip-interactive .process-card-detail { grid-column: 1 / -1; grid-row: calc(var(--process-mobile-row) + 1); padding: 1.25rem; border-bottom: 1px solid var(--line); }
+  .process-strip-interactive .process-card-detail p { font-size: 1rem; }
+}
+
