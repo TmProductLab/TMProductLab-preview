@@ -4,8 +4,8 @@
   "number": "04",
   "name": "Visualization & Rendering",
   "shortName": "Visualize",
-  "statement": "Images and motion that make an idea immediately legible.",
-  "description": "High-quality rendering, product animation, and presentation imagery for explanation, evaluation, and pitching.",
+  "statement": "Make ideas clear through images and motion.",
+  "description": "Rendering and animation for evaluation and presentation.",
   "capabilities": [
     "Product rendering",
     "Build animation",

@@ -17,7 +17,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   const labs = getLabs();
   const siteSettings = getSiteSettings();
-  const socialNames: SocialName[] = ["Instagram", "WhatsApp", "Facebook", "YouTube", "TikTok", "X"];
+  const socialNames: SocialName[] = ["Instagram", "WhatsApp", "YouTube", "X"];
   return (
     <footer className="site-footer">
       <div className="footer-brand">

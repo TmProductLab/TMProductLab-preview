@@ -2,22 +2,30 @@
   "heroWelcome": "Welcome to",
   "heroLineOne": "Future-ready",
   "heroLineTwo": "design, made real",
-  "heroDescriptor": "Product design, CAD engineering, LEGO development, visualization and animation—from early concept to presentation-ready outcome.",
+  "heroDescriptor": "Product design, engineering, LEGO, visualization and animation.",
   "heroSubtitle": "Designed with purpose. Engineered for impact.",
   "heroImage": "/hero-cinematic-v2.png",
   "heroImageAlt": "A black and gold modular industrial imaging concept on an articulated base",
   "bridgeEyebrow": "Studio framework / 01—05",
   "bridgeStatement": "Five disciplines. One connected process—from concept to creation.",
-  "bridgeMeta": ["Independent", "Multidisciplinary", "Built to grow"],
+  "bridgeMeta": [
+    "Independent",
+    "Multidisciplinary",
+    "Built to grow"
+  ],
   "selectedEyebrow": "Selected work",
   "selectedTitle": "Ideas resolved through making.",
   "labsEyebrow": "Five connected Labs",
   "labsTitle": "Different disciplines.\nOne studio system.",
-  "labsCopy": "Specialized practices connected by one approach to making.",
+  "labsCopy": "Five specialties. Shared thinking.",
   "processEyebrow": "Concept to creation",
-  "processTitle": "A flexible path from possibility to presentation.",
-  "processCopy": "Every project follows the stages it needs—not a rigid formula. The studio connects creative exploration with technical resolution.",
-  "statementLines": ["Function meets creativity.", "Precision supports expression.", "Every outcome earns its clarity."],
+  "processTitle": "From idea to outcome.",
+  "processCopy": "Choose the stages your project needs, from creative exploration to technical resolution.",
+  "statementLines": [
+    "Function meets creativity.",
+    "Precision supports expression.",
+    "Every outcome earns its clarity."
+  ],
   "contactEyebrow": "Start a conversation",
   "contactTitle": "Have an idea worth making real?"
 }

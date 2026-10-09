@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProjectCard } from "@/components/project-card";
 import { getLab, getLabs, getProjectsForLab } from "@/lib/site-data";
+import { siteAsset } from "@/lib/site-paths";
+
+const labWorkTitles: Record<string, string> = {
+  "product-design": "Ideas taking shape.",
+  "cad-engineering": "Precision in practice.",
+  "lego-design": "Built brick by brick.",
+  visualization: "Form, light & material.",
+  "2d-animation": "Stories in motion.",
+};
 
 export function generateStaticParams() {
   return getLabs().map((lab) => ({ slug: lab.slug }));
@@ -20,29 +30,33 @@ export default async function LabPage({ params }: { params: Promise<{ slug: stri
   return (
     <main id="main-content">
       <header className="lab-hero">
+        {lab.image && <Image className="lab-hero-background" src={siteAsset(lab.image)} alt={lab.imageAlt || lab.name} fill priority sizes="100vw" />}
+        <div className="lab-hero-overlay" aria-hidden="true" />
         <div className="shell lab-hero-inner">
-          <p className="eyebrow">Lab {lab.number} / {lab.shortName}</p>
-          <h1>{lab.name}</h1>
-          <p>{lab.statement}</p>
+          <div className="lab-hero-copy">
+            <span className="lab-hero-mark" aria-hidden="true" />
+            <h1>{lab.name}</h1>
+            <p>{lab.statement}</p>
+          </div>
         </div>
       </header>
       <section className="page-section shell lab-intro-grid">
-        <div>
-          <p className="eyebrow">Approach</p>
+        <div className="lab-intro-copy">
+          <span className="lab-intro-mark" aria-hidden="true" />
           <h2>{lab.description}</h2>
         </div>
-        <div className="capability-list">
-          <p className="eyebrow">Capabilities</p>
-          {lab.capabilities.map((capability, index) => (
-            <div key={capability}><span>0{index + 1}</span><strong>{capability}</strong></div>
-          ))}
+        <div className="lab-capabilities">
+          <ul>
+            {lab.capabilities.map((capability) => (
+              <li key={capability}><span aria-hidden="true" /><strong>{capability}</strong></li>
+            ))}
+          </ul>
         </div>
       </section>
       <section className="page-section lab-work-section">
         <div className="shell">
           <div className="section-heading">
-            <p className="eyebrow">Related work</p>
-            <h2>Projects crossing this Lab.</h2>
+            <h2>{labWorkTitles[lab.slug] ?? "Selected work."}</h2>
           </div>
           <div className="work-grid">
             {labProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}

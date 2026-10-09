@@ -9,13 +9,13 @@
     "visualization",
     "2d-animation"
   ],
-  "year": "Project slot",
-  "status": "Media pending",
-  "summary": "Reserved for a multidisciplinary project moving from concept through technical and visual execution.",
+  "year": "Coming soon",
+  "status": "Coming soon",
+  "summary": "New work is being prepared and will be added soon.",
   "featured": true,
   "visual": "signal",
-  "thumbnail": "",
-  "thumbnailAlt": "",
+  "thumbnail": "/uploads/projects-coming-soon-light.png",
+  "thumbnailAlt": "TMProductLab projects coming soon. New work is being prepared and will be added soon.",
   "modelUrl": "",
   "modelPoster": "",
   "mediaFrames": [],
@@ -26,5 +26,8 @@
     "prototype",
     "visualize",
     "present"
-  ]
+  ],
+  "temporary": false,
+  "imageCredit": "",
+  "imageSource": ""
 }

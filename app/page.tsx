@@ -43,7 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="studio-bridge studio-bridge-divider" aria-hidden="true" />
+      <div className="hero-work-transition shell" aria-hidden="true"><span /></div>
 
       <section className="section shell selected-work">
         <header className="work-page-heading home-work-heading">
@@ -63,7 +63,7 @@ export default function Home() {
               .join(" / ");
             return (
               <article className="featured-project" key={project.slug}>
-                <ProjectCard project={project} large dashMarker />
+                <ProjectCard project={project} large dashMarker>
                 <aside className="project-description" aria-label={`${project.title} description`}>
                   <div>
                     <p className="project-description-copy">{project.summary}</p>
@@ -74,6 +74,7 @@ export default function Home() {
                   </dl>
                   <Link className="text-link" href={`/work/${project.slug}`}>View project</Link>
                 </aside>
+                </ProjectCard>
               </article>
             );
           })}

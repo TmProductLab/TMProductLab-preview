@@ -7,30 +7,19 @@
   "secondaryLabs": [
     "visualization"
   ],
-  "year": "Temporary sample",
-  "status": "Reference imagery",
-  "summary": "A temporary LEGO case-study example for showing construction logic, repeated modules, structural iteration, and instruction-ready presentation.",
+  "year": "Coming soon",
+  "status": "Coming soon",
+  "summary": "New work is being prepared and will be added soon.",
   "featured": true,
   "visual": "assembly",
-  "thumbnail": "/uploads/temporary-lego.webp",
-  "thumbnailAlt": "A blue and white architectural model constructed from LEGO elements",
-  "temporary": true,
-  "imageCredit": "Photo by Compagnons on Unsplash",
-  "imageSource": "https://unsplash.com/photos/a-model-of-a-building-made-out-of-legos-UfxSk9Ryd9w",
+  "thumbnail": "/uploads/projects-coming-soon-dark.png",
+  "thumbnailAlt": "TMProductLab projects coming soon. New work is being prepared and will be added soon.",
+  "temporary": false,
+  "imageCredit": "",
+  "imageSource": "",
   "modelUrl": "",
   "modelPoster": "",
-  "mediaFrames": [
-    {
-      "label": "Reference 01",
-      "title": "Modular construction language",
-      "caption": "Temporary reference media demonstrating where a final build, structural breakdowns, iteration images, and construction notes will appear.",
-      "phase": "Assembly",
-      "mediaType": "Free-use reference photograph",
-      "status": "Temporary",
-      "image": "/uploads/temporary-lego.webp",
-      "imageAlt": "A blue and white architectural model constructed from LEGO elements"
-    }
-  ],
+  "mediaFrames": [],
   "processStages": [
     "design",
     "model",

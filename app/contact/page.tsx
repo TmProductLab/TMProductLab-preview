@@ -8,7 +8,7 @@ export default function ContactPage() {
   const siteSettings = getSiteSettings();
   const recipient = siteSettings.contactEmail;
   const content = getStudioPages().contact;
-  const socialNames: SocialName[] = ["Instagram", "WhatsApp", "Facebook", "YouTube", "TikTok", "X"];
+  const socialNames: SocialName[] = ["Instagram", "WhatsApp", "YouTube", "X"];
   return (
     <main id="main-content" className="contact-page">
       <header className="work-page-heading contact-page-heading shell">

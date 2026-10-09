@@ -8,30 +8,19 @@
     "product-design",
     "cad-engineering"
   ],
-  "year": "Temporary sample",
-  "status": "Reference imagery",
-  "summary": "A temporary visualization case study exploring surface, controlled highlights, material contrast, and the studio’s black-and-gold visual language.",
+  "year": "Coming soon",
+  "status": "Coming soon",
+  "summary": "New work is being prepared and will be added soon.",
   "featured": true,
   "visual": "fold",
-  "thumbnail": "/uploads/temporary-visualization.webp",
-  "thumbnailAlt": "A dark abstract three-dimensional surface with warm gold highlights",
-  "temporary": true,
-  "imageCredit": "Render by Pawel Czerwinski on Unsplash",
-  "imageSource": "https://unsplash.com/photos/a-black-and-brown-abstract-background-with-curves-0-NWB7hW8ns",
+  "thumbnail": "/uploads/projects-coming-soon-light.png",
+  "thumbnailAlt": "TMProductLab projects coming soon. New work is being prepared and will be added soon.",
+  "temporary": false,
+  "imageCredit": "",
+  "imageSource": "",
   "modelUrl": "",
   "modelPoster": "",
-  "mediaFrames": [
-    {
-      "label": "Reference 01",
-      "title": "Material and lighting direction",
-      "caption": "Temporary reference media showing how a finished rendering, lighting breakdown, material study, or animation frame can be paired with concise visual-direction notes.",
-      "phase": "Visualization",
-      "mediaType": "Free-use 3D render",
-      "status": "Temporary",
-      "image": "/uploads/temporary-visualization.webp",
-      "imageAlt": "A dark abstract three-dimensional surface with warm gold highlights"
-    }
-  ],
+  "mediaFrames": [],
   "processStages": [
     "visualize",
     "present"

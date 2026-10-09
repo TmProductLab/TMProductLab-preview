@@ -9,14 +9,13 @@ export default function WorkPage() {
   const projects = getProjects();
   return (
     <main id="main-content">
-      <header className="work-page-heading shell">
+      <header className="work-page-heading work-index-heading shell">
         <div className="work-heading-meta">
           <p className="eyebrow">{content.eyebrow}</p>
           <p className="eyebrow">{String(projects.length).padStart(2, "0")} projects</p>
         </div>
         <div className="work-heading-copy">
           <h1>{content.title}</h1>
-          <p>{content.intro}</p>
         </div>
       </header>
       <section className="work-projects shell">

@@ -4,8 +4,8 @@
   "number": "02",
   "name": "CAD & Engineering",
   "shortName": "CAD",
-  "statement": "Precision models built to move beyond the screen.",
-  "description": "Parametric and surface modeling, assemblies, technical detailing, and optimization for real-world development.",
+  "statement": "Precision models for real-world development.",
+  "description": "Parametric models, assemblies, and technical documentation.",
   "capabilities": [
     "Parametric modeling",
     "Surface development",

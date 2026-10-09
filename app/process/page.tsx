@@ -35,10 +35,10 @@ export default function ProcessPage() {
                 <p className="eyebrow">{stage.title} projects</p>
                 {stageProjects.length ? <div className="process-project-grid">
                   {stageProjects.map((project) => <Link key={project.slug} className="process-project" href={`/work/${project.slug}`}>
-                    <div className="process-project-image">{project.thumbnail ? <img src={siteAsset(project.thumbnail)} alt={project.thumbnailAlt || project.title} /> : <span>Project imagery coming soon</span>}</div>
                     <div className="process-project-title"><h3>{project.title}</h3><span aria-hidden="true">↗</span></div>
                     <p>{project.summary}</p>
                     {project.temporary && <span className="process-project-note">Temporary reference</span>}
+                    <div className="process-project-image">{project.thumbnail ? <img src={siteAsset(project.thumbnail)} alt={project.thumbnailAlt || project.title} /> : <span>Project imagery coming soon</span>}</div>
                   </Link>)}
                 </div> : <p className="process-project-empty">Projects for this stage are coming soon.</p>}
               </div>
